@@ -1,10 +1,31 @@
-import React from 'react'
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import Image from "next/image"
+
 
 const MobileNav = ({ user }: MobileNavProps) => {
   return (
-    <div>
-      MobileNav
-    </div>
+    <section className="w-full max-w-[264px]">
+      <Sheet>
+  <SheetTrigger><Image  /></SheetTrigger>
+  <SheetContent>
+    <SheetHeader>
+      <SheetTitle>Are you absolutely sure?</SheetTitle>
+      <SheetDescription>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </SheetDescription>
+    </SheetHeader>
+  </SheetContent>
+</Sheet>
+
+    </section>
   )
 }
 
